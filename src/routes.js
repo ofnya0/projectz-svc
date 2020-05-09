@@ -3,6 +3,9 @@ const appRouter = express.Router()
 
 const projects = require( './data' )
 
+appRouter.get( '/services/hello', function ( req, res)) {
+  res.json({ code: 'success', payload: 'World'})
+}
 appRouter.get( '/services/projects', function( req, res ) {
   res.json({ code: 'success', payload: projects })
 })
